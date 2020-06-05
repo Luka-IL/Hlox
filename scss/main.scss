@@ -1,5 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600&display=swap');
 
+$blue:#6383fe;
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin sector {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    color: $blue;
+    font-weight: 700;
+
+    .video-sector__name {
+        text-transform: uppercase;
+    }
+
+    .video-sector__number {
+        font-size: 20px;
+    }
+    
+    .video-sector__line{
+        display: block;
+        width:25px;
+        height:2px;
+        background-color:$blue;
+    }
+}
+
+@mixin section-number{
+    display:flex;
+    justify-content: space-between;
+    align-self: flex-start;
+    min-width: 210px;
+    transform:rotate(90deg);
+    
+        .section-number__line{
+            position: relative;
+            display: block;
+            width:150px;
+            border-top:1px solid rgba(255,255,255,.31);
+            
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                width:30px;
+                height:3px;
+                background-color:#fff;
+                top:-8px;
+                left:3px;
+                
+            }
+        }
+}
+
+
+
+
 * {
     padding: 0;
     margin: 0;
@@ -7,7 +69,7 @@
 }
 
 body {
-    padding-top:35px;
+    padding-top: 35px;
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
     background-color: #000;
@@ -25,6 +87,7 @@ h2 {
     font-size: 170px;
     font-family: 'Anton';
     text-transform: uppercase;
+    font-weight: 400;
 
     .title-bottom {
         font-size: 188px
@@ -70,49 +133,51 @@ header {
     display: flex;
     justify-content: flex-end;
     margin-top: 150px;
-    margin-bottom: 200px;
 }
 
 .agency__title-link {
     position: absolute;
-    width:60%;
+    width: 60%;
     top: -30px;
     left: 0;
 }
 
-.agency__title {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-}
-
 .title-top {
     z-index: -1;
-    align-self: flex-end;
 }
 
-.agency__title-top {
-    color: #000;
-    text-shadow: 0px 0px 4px #fff;
-}
-
-.agency__title-bottom {
-    font-size: 230px;
-    margin-top: -50px;
+.title-bottom{
     z-index: 1;
 }
+
+.agency__title {
+    @include flex-column;
+    margin: 0;
+
+    .agency__title-top {
+        color: #000;
+        text-shadow: 0px 0px 4px #fff;
+    }
+
+    .agency__title-bottom {
+        font-size: 230px;
+        margin-top: -50px;
+    }
+}
+
 
 .link {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width:205px;
-    height:65px;
-    margin-top:50px;
-    padding:0px 30px;
+    width: 205px;
+    height: 65px;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 0px 30px;
     background-color: #fff;
-    color: #000;  
-    
+    color: #000;
+
     &::after {
         content: '';
         display: inline-block;
@@ -126,8 +191,7 @@ header {
 
 
 .agency__text-video {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     align-items: flex-end;
     width: 70%;
 
@@ -138,9 +202,72 @@ header {
         line-height: 23px;
     }
 
+    video {
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
-video {
-    width:100%;
-    object-fit: cover;
+.trend {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 500px;
+}
+
+.trend__title-link {
+    position: absolute;
+    width: 60%;
+    top: -30px;
+    left: 0;
+}
+
+.trend__title {
+    @include flex-column;
+    margin-top: -110px;
+
+    .trend__title-top {
+        color: black;
+        text-shadow: 0px 0px 5px #fff;
+    }
+
+    .trend__title-bottom {
+        color: $blue;
+        margin-top: -30px;
+    }
+}
+
+.trend__text-video {
+    display: flex;
+    justify-content: flex-end;
+
+    .trend__video {
+        position: relative;
+        width: 75%;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 30px;
+
+        video {
+            width: 70%;
+            object-fit: cover;
+        }
+
+        .trend__video-sector {
+            @include sector;
+            right:-105px;
+            top:40px;
+        }
+    }
+
+    .trend__text-block {
+        width: 25%;
+        @include flex-column;
+        justify-content: flex-end;
+    }
+}
+
+.trend__section-number{
+  @include section-number;
+    
 }
