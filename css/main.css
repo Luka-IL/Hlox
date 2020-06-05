@@ -79,7 +79,8 @@ header {
 
 .agency__title-bottom {
   font-size: 230px;
-  margin-top: -50px; }
+  margin-top: -50px;
+  z-index: 1; }
 
 .link {
   display: flex;

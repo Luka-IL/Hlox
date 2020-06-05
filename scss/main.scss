@@ -99,6 +99,7 @@ header {
 .agency__title-bottom {
     font-size: 230px;
     margin-top: -50px;
+    z-index: 1;
 }
 
 .link {
@@ -112,7 +113,7 @@ header {
     background-color: #fff;
     color: #000;  
     
-    &::after{
+    &::after {
         content: '';
         display: inline-block;
         background-color: white;
