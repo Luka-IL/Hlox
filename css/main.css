@@ -5,6 +5,7 @@
   box-sizing: border-box; }
 
 body {
+  overflow-x: hidden;
   padding-top: 35px;
   font-size: 15px;
   font-family: 'Montserrat', sans-serif;
@@ -162,8 +163,8 @@ header {
       width: 200px;
       color: #6383fe;
       font-weight: 700;
-      right: -105px;
-      top: 40px; }
+      top: 100px;
+      right: -105px; }
       .trend__text-video .trend__video .trend__video-sector .video-sector__name {
         text-transform: uppercase; }
       .trend__text-video .trend__video .trend__video-sector .video-sector__number {
@@ -224,6 +225,8 @@ header {
       text-shadow: 0px 0px 5px #fff; }
     .crossfit__title-link .crossfit__title .title-bottom {
       margin-top: -30px; }
+    .crossfit__title-link .crossfit__title .crossfit__title-top {
+      margin-left: -100px; }
     .crossfit__title-link .crossfit__title .crossfit__title-bottom {
       color: #d2b48c;
       text-align: right; }
@@ -253,9 +256,9 @@ header {
       width: 200px;
       color: #6383fe;
       font-weight: 700;
+      top: 100px;
       color: #d2b48c;
-      left: -105px;
-      top: 40px; }
+      left: -105px; }
       .crossfit__text-video .crossfit__video .crossfit__video-sector .video-sector__name {
         text-transform: uppercase; }
       .crossfit__text-video .crossfit__video .crossfit__video-sector .video-sector__number {
@@ -342,9 +345,10 @@ header {
       width: 200px;
       color: #6383fe;
       font-weight: 700;
+      top: 100px;
       color: #f5f8cb;
       right: -105px;
-      top: 40px; }
+      top: 80px; }
       .yoga__text-video .yoga__video .yoga__video-sector .video-sector__name {
         text-transform: uppercase; }
       .yoga__text-video .yoga__video .yoga__video-sector .video-sector__number {
@@ -408,6 +412,8 @@ header {
       text-shadow: 0px 0px 5px #fff; }
     .watch__title-link .watch__title .title-bottom {
       margin-top: -30px; }
+    .watch__title-link .watch__title .watch__title-top {
+      margin-left: -100px; }
     .watch__title-link .watch__title .watch__title-bottom {
       color: #5ab7fc;
       text-align: right; }
@@ -437,9 +443,9 @@ header {
       width: 200px;
       color: #6383fe;
       font-weight: 700;
+      top: 100px;
       color: #5ab7fc;
-      left: -105px;
-      top: 40px; }
+      left: -105px; }
       .watch__text-video .watch__video .watch__video-sector .video-sector__name {
         text-transform: uppercase; }
       .watch__text-video .watch__video .watch__video-sector .video-sector__number {
@@ -526,9 +532,9 @@ header {
       width: 200px;
       color: #6383fe;
       font-weight: 700;
+      top: 100px;
       color: #ef7c62;
-      right: -105px;
-      top: 40px; }
+      right: -105px; }
       .motorbike__text-video .motorbike__video .motorbike__video-sector .video-sector__name {
         text-transform: uppercase; }
       .motorbike__text-video .motorbike__video .motorbike__video-sector .video-sector__number {
@@ -621,9 +627,9 @@ header {
       width: 200px;
       color: #6383fe;
       font-weight: 700;
+      top: 100px;
       color: #53e496;
-      left: -105px;
-      top: 40px; }
+      left: -105px; }
       .food__text-video .food__video .food__video-sector .video-sector__name {
         text-transform: uppercase; }
       .food__text-video .food__video .food__video-sector .video-sector__number {

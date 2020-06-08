@@ -28,6 +28,7 @@ $green:#53e496;
     width: 200px;
     color: $blue;
     font-weight: 700;
+    top:100px;
 
     .video-sector__name {
         text-transform: uppercase;
@@ -99,6 +100,7 @@ $green:#53e496;
 }
 
 body {
+    overflow-x: hidden;
     padding-top: 35px;
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
@@ -276,7 +278,6 @@ header {
         .trend__video-sector {
             @include sector;
             right: -105px;
-            top: 40px;
         }
     }
 
@@ -306,6 +307,10 @@ header {
 
     .crossfit__title {
         @include title;
+        
+        .crossfit__title-top{
+            margin-left:-100px;
+        }
 
         .crossfit__title-bottom {
             color: $tan;
@@ -341,7 +346,6 @@ header {
             @include sector;
             color: $tan;
             left: -105px;
-            top: 40px;
 
             .video-sector__line {
                 background-color: $tan;
@@ -408,7 +412,7 @@ header {
             @include sector;
             color: $salat;
             right: -105px;
-            top: 40px;
+            top: 80px;
 
             .video-sector__line {
                 background-color: $salat;
@@ -448,6 +452,10 @@ header {
 
     .watch__title {
         @include title;
+        
+        .watch__title-top{
+            margin-left:-100px;
+        }
 
         .watch__title-bottom {
             color: $aqua;
@@ -483,7 +491,6 @@ header {
             @include sector;
             color: $aqua;
             left: -105px;
-            top: 40px;
 
             .video-sector__line {
                 background-color: $aqua;
@@ -550,7 +557,6 @@ header {
             @include sector;
             color: $red;
             right: -105px;
-            top: 40px;
 
             .video-sector__line {
                 background-color: $red;
@@ -625,7 +631,6 @@ header {
             @include sector;
             color: $green;
             left: -105px;
-            top: 40px;
 
             .video-sector__line {
                 background-color: $green;
