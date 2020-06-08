@@ -26,8 +26,10 @@ h2 {
     font-size: 188px; }
 
 h3 {
+  margin-bottom: 30px;
   font-size: 20px;
   font-weight: 600px;
+  line-height: 27px;
   text-transform: uppercase; }
 
 ul {
@@ -38,7 +40,8 @@ a {
   color: #fff; }
 
 p {
-  color: rgba(255, 255, 255, 0.5); }
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 23px; }
 
 .container {
   max-width: 1400px;
@@ -82,6 +85,7 @@ header {
     margin-top: -50px; }
 
 .link {
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -91,7 +95,8 @@ header {
   margin-left: 50px;
   padding: 0px 30px;
   background-color: #fff;
-  color: #000; }
+  color: #000;
+  z-index: 1; }
   .link::after {
     content: '';
     display: inline-block;
@@ -109,8 +114,7 @@ header {
   .agency__text-video .agency__text {
     width: 325px;
     margin-bottom: 25px;
-    text-align: left;
-    line-height: 23px; }
+    text-align: left; }
   .agency__text-video video {
     width: 100%;
     object-fit: cover; }
@@ -118,25 +122,25 @@ header {
 .trend {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  margin-top: 500px; }
+  justify-content: flex-end;
+  margin-top: 350px; }
 
 .trend__title-link {
   position: absolute;
   width: 60%;
   top: -30px;
   left: 0; }
-
-.trend__title {
-  display: flex;
-  flex-direction: column;
-  margin-top: -110px; }
-  .trend__title .trend__title-top {
-    color: black;
-    text-shadow: 0px 0px 5px #fff; }
-  .trend__title .trend__title-bottom {
-    color: #6383fe;
-    margin-top: -30px; }
+  .trend__title-link .trend__title {
+    display: flex;
+    flex-direction: column;
+    margin-top: -110px; }
+    .trend__title-link .trend__title .title-top {
+      color: black;
+      text-shadow: 0px 0px 5px #fff; }
+    .trend__title-link .trend__title .title-bottom {
+      margin-top: -30px; }
+    .trend__title-link .trend__title .trend__title-bottom {
+      color: #6383fe; }
 
 .trend__text-video {
   display: flex;
@@ -176,6 +180,9 @@ header {
     justify-content: flex-end; }
 
 .trend__section-number {
+  position: absolute;
+  top: -20px;
+  right: -50px;
   display: flex;
   justify-content: space-between;
   align-self: flex-start;
@@ -195,5 +202,545 @@ header {
       background-color: #fff;
       top: -8px;
       left: 3px; }
+
+.crossfit {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 350px;
+  flex-direction: row-reverse; }
+
+.crossfit__title-link {
+  position: absolute;
+  width: 60%;
+  top: 0;
+  right: 0; }
+  .crossfit__title-link .crossfit__title {
+    display: flex;
+    flex-direction: column;
+    margin-top: -110px; }
+    .crossfit__title-link .crossfit__title .title-top {
+      color: black;
+      text-shadow: 0px 0px 5px #fff; }
+    .crossfit__title-link .crossfit__title .title-bottom {
+      margin-top: -30px; }
+    .crossfit__title-link .crossfit__title .crossfit__title-bottom {
+      color: #d2b48c;
+      text-align: right; }
+  .crossfit__title-link .link {
+    position: absolute;
+    right: 100px;
+    bottom: -100px; }
+
+.crossfit__text-video {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end; }
+  .crossfit__text-video .crossfit__video {
+    position: relative;
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 30px; }
+    .crossfit__text-video .crossfit__video video {
+      width: 70%;
+      object-fit: cover; }
+    .crossfit__text-video .crossfit__video .crossfit__video-sector {
+      position: absolute;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 200px;
+      color: #6383fe;
+      font-weight: 700;
+      color: #d2b48c;
+      left: -105px;
+      top: 40px; }
+      .crossfit__text-video .crossfit__video .crossfit__video-sector .video-sector__name {
+        text-transform: uppercase; }
+      .crossfit__text-video .crossfit__video .crossfit__video-sector .video-sector__number {
+        font-size: 20px; }
+      .crossfit__text-video .crossfit__video .crossfit__video-sector .video-sector__line {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: #6383fe; }
+      .crossfit__text-video .crossfit__video .crossfit__video-sector .video-sector__line {
+        background-color: #d2b48c; }
+  .crossfit__text-video .crossfit__text-block {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
+
+.crossfit__section-number {
+  position: absolute;
+  top: -20px;
+  left: -120px;
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+  min-width: 210px;
+  transform: rotate(90deg); }
+  .crossfit__section-number .section-number__line {
+    position: relative;
+    display: block;
+    width: 150px;
+    border-top: 1px solid rgba(255, 255, 255, 0.31); }
+    .crossfit__section-number .section-number__line::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      top: -8px;
+      left: 3px; }
+  .crossfit__section-number .section-number__line::after {
+    left: 25px; }
+
+.yoga {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 350px; }
+
+.yoga__title-link {
+  position: absolute;
+  width: 60%;
+  top: -30px;
+  left: 0; }
+  .yoga__title-link .yoga__title {
+    display: flex;
+    flex-direction: column;
+    margin-top: -110px; }
+    .yoga__title-link .yoga__title .title-top {
+      color: black;
+      text-shadow: 0px 0px 5px #fff; }
+    .yoga__title-link .yoga__title .title-bottom {
+      margin-top: -30px; }
+    .yoga__title-link .yoga__title .yoga__title-bottom {
+      color: #f5f8cb; }
+
+.yoga__text-video {
+  display: flex;
+  justify-content: flex-end; }
+  .yoga__text-video .yoga__video {
+    position: relative;
+    width: 75%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px; }
+    .yoga__text-video .yoga__video video {
+      width: 70%;
+      object-fit: cover; }
+    .yoga__text-video .yoga__video .yoga__video-sector {
+      position: absolute;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 200px;
+      color: #6383fe;
+      font-weight: 700;
+      color: #f5f8cb;
+      right: -105px;
+      top: 40px; }
+      .yoga__text-video .yoga__video .yoga__video-sector .video-sector__name {
+        text-transform: uppercase; }
+      .yoga__text-video .yoga__video .yoga__video-sector .video-sector__number {
+        font-size: 20px; }
+      .yoga__text-video .yoga__video .yoga__video-sector .video-sector__line {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: #6383fe; }
+      .yoga__text-video .yoga__video .yoga__video-sector .video-sector__line {
+        background-color: #f5f8cb; }
+  .yoga__text-video .yoga__text-block {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
+
+.yoga__section-number {
+  position: absolute;
+  top: -20px;
+  right: -50px;
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+  min-width: 210px;
+  transform: rotate(90deg); }
+  .yoga__section-number .section-number__line {
+    position: relative;
+    display: block;
+    width: 150px;
+    border-top: 1px solid rgba(255, 255, 255, 0.31); }
+    .yoga__section-number .section-number__line::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      top: -8px;
+      left: 3px; }
+  .yoga__section-number .section-number__line::after {
+    left: 45px; }
+
+.watch {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 350px; }
+
+.watch__title-link {
+  position: absolute;
+  width: 60%;
+  top: 0;
+  right: 0; }
+  .watch__title-link .watch__title {
+    display: flex;
+    flex-direction: column;
+    margin-top: -110px; }
+    .watch__title-link .watch__title .title-top {
+      color: black;
+      text-shadow: 0px 0px 5px #fff; }
+    .watch__title-link .watch__title .title-bottom {
+      margin-top: -30px; }
+    .watch__title-link .watch__title .watch__title-bottom {
+      color: #5ab7fc;
+      text-align: right; }
+  .watch__title-link .link {
+    position: absolute;
+    right: 100px;
+    bottom: -100px; }
+
+.watch__text-video {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end; }
+  .watch__text-video .watch__video {
+    position: relative;
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 30px; }
+    .watch__text-video .watch__video video {
+      width: 70%;
+      object-fit: cover; }
+    .watch__text-video .watch__video .watch__video-sector {
+      position: absolute;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 200px;
+      color: #6383fe;
+      font-weight: 700;
+      color: #5ab7fc;
+      left: -105px;
+      top: 40px; }
+      .watch__text-video .watch__video .watch__video-sector .video-sector__name {
+        text-transform: uppercase; }
+      .watch__text-video .watch__video .watch__video-sector .video-sector__number {
+        font-size: 20px; }
+      .watch__text-video .watch__video .watch__video-sector .video-sector__line {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: #6383fe; }
+      .watch__text-video .watch__video .watch__video-sector .video-sector__line {
+        background-color: #5ab7fc; }
+  .watch__text-video .watch__text-block {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
+
+.watch__section-number {
+  position: absolute;
+  top: -20px;
+  left: -120px;
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+  min-width: 210px;
+  transform: rotate(90deg); }
+  .watch__section-number .section-number__line {
+    position: relative;
+    display: block;
+    width: 150px;
+    border-top: 1px solid rgba(255, 255, 255, 0.31); }
+    .watch__section-number .section-number__line::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      top: -8px;
+      left: 3px; }
+  .watch__section-number .section-number__line::after {
+    left: 65px; }
+
+.motorbike {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 350px; }
+
+.motorbike__title-link {
+  position: absolute;
+  width: 60%;
+  top: -30px;
+  left: 0; }
+  .motorbike__title-link .motorbike__title {
+    display: flex;
+    flex-direction: column;
+    margin-top: -110px; }
+    .motorbike__title-link .motorbike__title .title-top {
+      color: black;
+      text-shadow: 0px 0px 5px #fff; }
+    .motorbike__title-link .motorbike__title .title-bottom {
+      margin-top: -30px; }
+    .motorbike__title-link .motorbike__title .motorbike__title-bottom {
+      color: #ef7c62; }
+
+.motorbike__text-video {
+  display: flex;
+  justify-content: flex-end; }
+  .motorbike__text-video .motorbike__video {
+    position: relative;
+    width: 75%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px; }
+    .motorbike__text-video .motorbike__video video {
+      width: 70%;
+      object-fit: cover; }
+    .motorbike__text-video .motorbike__video .motorbike__video-sector {
+      position: absolute;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 200px;
+      color: #6383fe;
+      font-weight: 700;
+      color: #ef7c62;
+      right: -105px;
+      top: 40px; }
+      .motorbike__text-video .motorbike__video .motorbike__video-sector .video-sector__name {
+        text-transform: uppercase; }
+      .motorbike__text-video .motorbike__video .motorbike__video-sector .video-sector__number {
+        font-size: 20px; }
+      .motorbike__text-video .motorbike__video .motorbike__video-sector .video-sector__line {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: #6383fe; }
+      .motorbike__text-video .motorbike__video .motorbike__video-sector .video-sector__line {
+        background-color: #ef7c62; }
+  .motorbike__text-video .motorbike__text-block {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
+
+.motorbike__section-number {
+  position: absolute;
+  top: -20px;
+  right: -50px;
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+  min-width: 210px;
+  transform: rotate(90deg); }
+  .motorbike__section-number .section-number__line {
+    position: relative;
+    display: block;
+    width: 150px;
+    border-top: 1px solid rgba(255, 255, 255, 0.31); }
+    .motorbike__section-number .section-number__line::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      top: -8px;
+      left: 3px; }
+  .motorbike__section-number .section-number__line::after {
+    left: 95px; }
+
+.food {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 350px; }
+
+.food__title-link {
+  position: absolute;
+  width: 60%;
+  top: 0;
+  right: 0; }
+  .food__title-link .food__title {
+    display: flex;
+    flex-direction: column;
+    margin-top: -110px; }
+    .food__title-link .food__title .title-top {
+      color: black;
+      text-shadow: 0px 0px 5px #fff; }
+    .food__title-link .food__title .title-bottom {
+      margin-top: -30px; }
+    .food__title-link .food__title .food__title-bottom {
+      color: #53e496;
+      text-align: right; }
+  .food__title-link .link {
+    position: absolute;
+    right: 100px;
+    bottom: -100px; }
+
+.food__text-video {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end; }
+  .food__text-video .food__video {
+    position: relative;
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 30px; }
+    .food__text-video .food__video video {
+      width: 70%;
+      object-fit: cover; }
+    .food__text-video .food__video .food__video-sector {
+      position: absolute;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 200px;
+      color: #6383fe;
+      font-weight: 700;
+      color: #53e496;
+      left: -105px;
+      top: 40px; }
+      .food__text-video .food__video .food__video-sector .video-sector__name {
+        text-transform: uppercase; }
+      .food__text-video .food__video .food__video-sector .video-sector__number {
+        font-size: 20px; }
+      .food__text-video .food__video .food__video-sector .video-sector__line {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: #6383fe; }
+      .food__text-video .food__video .food__video-sector .video-sector__line {
+        background-color: #53e496; }
+  .food__text-video .food__text-block {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
+
+.food__section-number {
+  position: absolute;
+  top: -20px;
+  left: -120px;
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+  min-width: 210px;
+  transform: rotate(90deg); }
+  .food__section-number .section-number__line {
+    position: relative;
+    display: block;
+    width: 150px;
+    border-top: 1px solid rgba(255, 255, 255, 0.31); }
+    .food__section-number .section-number__line::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      top: -8px;
+      left: 3px; }
+  .food__section-number .section-number__line::after {
+    left: 115px; }
+
+.email {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 350px;
+  width: 100%;
+  height: 420px; }
+
+.email__title {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-top: -110px;
+  top: -90px;
+  left: 20px; }
+  .email__title .title-top {
+    color: black;
+    text-shadow: 0px 0px 5px #fff; }
+  .email__title .title-bottom {
+    margin-top: -30px; }
+  .email__title .title-bottom {
+    margin-top: -45px; }
+
+.email__form-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 80%;
+  height: 80%;
+  background: url("../img/email-back.jpg") no-repeat center;
+  background-size: cover; }
+  .email__form-window .email__form {
+    display: flex;
+    width: 75%;
+    margin-right: 40px; }
+    .email__form-window .email__form #email {
+      width: 60%;
+      margin-right: 0;
+      padding-left: 20px;
+      background-color: transparent;
+      border-style: none;
+      border-bottom: 1px solid white;
+      color: white;
+      z-index: 2; }
+      .email__form-window .email__form #email::placeholder {
+        color: white; }
+      .email__form-window .email__form #email:focus {
+        background-color: transparent;
+        outline: none; }
+    .email__form-window .email__form .email__btn {
+      display: inline-block;
+      width: 30%;
+      border-style: none;
+      margin: 0; }
+      .email__form-window .email__form .email__btn:hover {
+        cursor: pointer; }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  footer .footer-social {
+    display: flex; }
+    footer .footer-social .inst {
+      display: block;
+      width: 32px;
+      height: 32px;
+      background: url("../img/bird%20twitter.svg") no-repeat center; }
+  footer .footer__by span {
+    border-left: 1px solid white;
+    padding-left: 5px; }
+  footer .footer__by span:nth-child(1) {
+    border: none; }
+  footer .footer__hello {
+    text-transform: uppercase; }
 
 /*# sourceMappingURL=main.css.map */
