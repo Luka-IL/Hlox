@@ -25,19 +25,19 @@ $(document).ready(function () {
         let scrollAnimation = new TimelineMax();
 
         scrollAnimation.to($(this).find(titleTop), {
-                x: 100,
+                x: 80,
                 ease: Power4.easeOut
             }, '0')
             .to($(this).find(titleBottom), {
-                x: -100,
+                x: -80,
                 ease: Linear.easeIn
             }, '0')
             .to($(this).find(videoBLock), {
-                y: 130,
+                y: 80,
                 ease: Linear.easeIn
             }, '0')
             .to($(this).find(videoSector), {
-                y: 60,
+                y: 50,
                 ease: Linear.easeIn
             }, '0');
 

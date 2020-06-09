@@ -29,7 +29,7 @@ $green:#53e496;
     color: $blue;
     font-weight: 700;
     top: 100px;
-
+    
     .video-sector__name {
         text-transform: uppercase;
     }
@@ -71,6 +71,10 @@ $green:#53e496;
 
         }
     }
+    
+    @media (max-width:800px){
+        display: none;
+    }
 }
 
 @mixin title-link {
@@ -82,6 +86,14 @@ $green:#53e496;
     display: flex;
     flex-direction: column;
     margin-top: -120px;
+    
+    @media (max-width:800px){
+        margin-top:-100px;
+    }
+    
+    @media (max-width:600px){
+        margin-top:-80px;
+    }
 
     .title-top {
         color: black;
@@ -106,8 +118,12 @@ $green:#53e496;
     width: 70%;
 
     @media (max-width:1000px) {
-        width: 80%;
+        width: 100%;
         height: 380px;
+    }
+    
+    @media (max-width:1000px) {
+        height: 340px;
     }
 }
 
@@ -115,6 +131,32 @@ $green:#53e496;
     position: absolute;
     right: 100px;
     bottom: -200px;
+
+    @media (max-width:1000px) {
+        right: 10px;
+    }
+}
+
+@mixin text-video {
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width:1000px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@mixin text-block {
+    width: 25%;
+    @include flex-column;
+    justify-content: flex-end;
+
+    @media (max-width:1000px) {
+        text-align: center;
+        width: 60%;
+        margin-top: 80px;
+    }
 }
 
 * {
@@ -163,11 +205,27 @@ h2 {
         font-size: 140px;
     }
 
+    @media (max-width:800px) {
+        font-size: 110px;
+    }
+    
+    @media (max-width:800px) {
+        font-size: 80px;
+    }
+
     .title-bottom {
         font-size: 188px;
 
         @media (max-width:1000px) {
             font-size: 158px;
+        }
+
+        @media (max-width:800px) {
+            font-size: 128px;
+        }
+        
+        @media (max-width:600px){
+            font-size: 98px
         }
     }
 }
@@ -332,6 +390,10 @@ p {
             border-bottom: 1px solid white;
         }
     }
+
+    @media (max-width:1000px) {
+        margin-left: 30px;
+    }
 }
 
 .agency__title-link {
@@ -411,8 +473,7 @@ p {
 }
 
 .trend__text-video {
-    display: flex;
-    justify-content: flex-end;
+    @include text-video;
 
     .trend__video {
         position: relative;
@@ -427,14 +488,12 @@ p {
 
         .trend__video-sector {
             @include sector;
-            right: -105px;
+            right: -125px;
         }
     }
 
     .trend__text-block {
-        width: 25%;
-        @include flex-column;
-        justify-content: flex-end;
+        @include text-block
     }
 }
 
@@ -484,20 +543,22 @@ p {
 }
 
 .crossfit__text-video {
-    display: flex;
+    @include text-video;
     flex-direction: row-reverse;
-    justify-content: flex-end;
 
     .crossfit__video {
         position: relative;
-        width: 75%;
+        width: 82%;
         display: flex;
         justify-content: flex-start;
         margin-left: 30px;
+        
+        @media(max-width:1000px){
+            justify-content: flex-end;
+        }
 
         video {
-            width: 70%;
-            object-fit: cover;
+            @include video
         }
 
         .crossfit__video-sector {
@@ -512,9 +573,7 @@ p {
     }
 
     .crossfit__text-block {
-        width: 25%;
-        @include flex-column;
-        justify-content: flex-end;
+        @include text-block
     }
 }
 
@@ -566,8 +625,7 @@ p {
 }
 
 .yoga__text-video {
-    display: flex;
-    justify-content: flex-end;
+    @include text-video;
 
     .yoga__video {
         position: relative;
@@ -577,8 +635,7 @@ p {
         margin-right: 30px;
 
         video {
-            width: 70%;
-            object-fit: cover;
+            @include video
         }
 
         .yoga__video-sector {
@@ -594,9 +651,7 @@ p {
     }
 
     .yoga__text-block {
-        width: 25%;
-        @include flex-column;
-        justify-content: flex-end;
+        @include text-block
     }
 }
 
@@ -621,7 +676,7 @@ p {
 .watch__title-link {
     @include title-link;
     top: 0;
-    right: 0;
+    right: 20px;
 
     .watch__title {
         @include title;
@@ -652,9 +707,8 @@ p {
 }
 
 .watch__text-video {
-    display: flex;
+    @include text-video;
     flex-direction: row-reverse;
-    justify-content: flex-end;
 
     .watch__video {
         position: relative;
@@ -664,8 +718,7 @@ p {
         margin-left: 30px;
 
         video {
-            width: 70%;
-            object-fit: cover;
+            @include video
         }
 
         .watch__video-sector {
@@ -680,9 +733,7 @@ p {
     }
 
     .watch__text-block {
-        width: 25%;
-        @include flex-column;
-        justify-content: flex-end;
+        @include text-block
     }
 }
 
@@ -729,8 +780,7 @@ p {
 }
 
 .motorbike__text-video {
-    display: flex;
-    justify-content: flex-end;
+    @include text-video;
 
     .motorbike__video {
         position: relative;
@@ -740,8 +790,7 @@ p {
         margin-right: 30px;
 
         video {
-            width: 70%;
-            object-fit: cover;
+            @include video
         }
 
         .motorbike__video-sector {
@@ -756,9 +805,7 @@ p {
     }
 
     .motorbike__text-block {
-        width: 25%;
-        @include flex-column;
-        justify-content: flex-end;
+        @include text-block
     }
 }
 
@@ -783,7 +830,7 @@ p {
 .food__title-link {
     @include title-link;
     top: 0;
-    right: 0;
+    right: 20px;
 
     .food__title {
         @include title;
@@ -810,9 +857,8 @@ p {
 }
 
 .food__text-video {
-    display: flex;
+    @include text-video;
     flex-direction: row-reverse;
-    justify-content: flex-end;
 
     .food__video {
         position: relative;
@@ -822,8 +868,7 @@ p {
         margin-left: 30px;
 
         video {
-            width: 70%;
-            object-fit: cover;
+            @include video
         }
 
         .food__video-sector {
@@ -838,9 +883,7 @@ p {
     }
 
     .food__text-block {
-        width: 25%;
-        @include flex-column;
-        justify-content: flex-end;
+        @include text-block
     }
 }
 
