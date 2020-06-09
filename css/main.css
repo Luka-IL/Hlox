@@ -17,14 +17,30 @@ h1 {
   font-size: 190px;
   font-family: 'Anton';
   text-transform: uppercase; }
+  @media (max-width: 1200px) {
+    h1 {
+      font-size: 160px; } }
+  h1 .title-bottom {
+    font-size: 230px;
+    margin-top: -50px; }
+    @media (max-width: 1200px) {
+      h1 .title-bottom {
+        margin-top: -20px;
+        font-size: 200px; } }
 
 h2 {
   font-size: 170px;
   font-family: 'Anton';
   text-transform: uppercase;
   font-weight: 400; }
+  @media (max-width: 1000px) {
+    h2 {
+      font-size: 140px; } }
   h2 .title-bottom {
     font-size: 188px; }
+    @media (max-width: 1000px) {
+      h2 .title-bottom {
+        font-size: 158px; } }
 
 h3 {
   margin-bottom: 30px;
@@ -134,8 +150,8 @@ p {
   align-items: center;
   width: 205px;
   height: 65px;
-  margin-top: 50px;
-  margin-left: 50px;
+  margin-top: 150px;
+  margin-left: 100px;
   padding: 0px 30px;
   background-color: #fff;
   color: #000;
@@ -177,9 +193,6 @@ p {
   .agency__title .agency__title-top {
     color: #000;
     text-shadow: 0px 0px 4px #fff; }
-  .agency__title .agency__title-bottom {
-    font-size: 230px;
-    margin-top: -50px; }
 
 .agency__link:hover {
   background-color: black;
@@ -244,8 +257,12 @@ p {
     justify-content: flex-end;
     margin-right: 30px; }
     .trend__text-video .trend__video video {
-      width: 70%;
-      object-fit: cover; }
+      object-fit: cover;
+      width: 70%; }
+      @media (max-width: 1000px) {
+        .trend__text-video .trend__video video {
+          width: 80%;
+          height: 380px; } }
     .trend__text-video .trend__video .trend__video-sector {
       position: absolute;
       display: flex;
@@ -334,7 +351,7 @@ p {
   .crossfit__title-link .link {
     position: absolute;
     right: 100px;
-    bottom: -100px; }
+    bottom: -200px; }
     .crossfit__title-link .link:hover {
       background-color: #d2b48c; }
 
@@ -548,7 +565,7 @@ p {
   .watch__title-link .link {
     position: absolute;
     right: 100px;
-    bottom: -100px; }
+    bottom: -200px; }
     .watch__title-link .link:hover {
       background-color: #5ab7fc; }
 
@@ -756,7 +773,7 @@ p {
   .food__title-link .link {
     position: absolute;
     right: 100px;
-    bottom: -100px; }
+    bottom: -200px; }
     .food__title-link .link:hover {
       background-color: #53e496; }
 

@@ -101,6 +101,22 @@ $green:#53e496;
     }
 }
 
+@mixin video {
+    object-fit: cover;
+    width: 70%;
+
+    @media (max-width:1000px) {
+        width: 80%;
+        height: 380px;
+    }
+}
+
+@mixin link-position {
+    position: absolute;
+    right: 100px;
+    bottom: -200px;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -121,6 +137,20 @@ h1 {
     font-size: 190px;
     font-family: 'Anton';
     text-transform: uppercase;
+
+    @media (max-width:1200px) {
+        font-size: 160px;
+    }
+
+    .title-bottom {
+        font-size: 230px;
+        margin-top: -50px;
+
+        @media (max-width:1200px) {
+            margin-top: -20px;
+            font-size: 200px;
+        }
+    }
 }
 
 h2 {
@@ -129,8 +159,16 @@ h2 {
     text-transform: uppercase;
     font-weight: 400;
 
+    @media (max-width:1000px) {
+        font-size: 140px;
+    }
+
     .title-bottom {
-        font-size: 188px
+        font-size: 188px;
+
+        @media (max-width:1000px) {
+            font-size: 158px;
+        }
     }
 }
 
@@ -240,7 +278,7 @@ p {
 }
 
 .navigation-animation {
-    top:0;
+    top: 0;
     opacity: 1;
     transition: all 0.5s;
 }
@@ -263,8 +301,8 @@ p {
     align-items: center;
     width: 205px;
     height: 65px;
-    margin-top: 50px;
-    margin-left: 50px;
+    margin-top: 150px;
+    margin-left: 100px;
     padding: 0px 30px;
     background-color: #fff;
     color: #000;
@@ -317,11 +355,6 @@ p {
     .agency__title-top {
         color: #000;
         text-shadow: 0px 0px 4px #fff;
-    }
-
-    .agency__title-bottom {
-        font-size: 230px;
-        margin-top: -50px;
     }
 }
 
@@ -389,8 +422,7 @@ p {
         margin-right: 30px;
 
         video {
-            width: 70%;
-            object-fit: cover;
+            @include video;
         }
 
         .trend__video-sector {
@@ -443,9 +475,7 @@ p {
     }
 
     .link {
-        position: absolute;
-        right: 100px;
-        bottom: -100px;
+        @include link-position;
 
         &:hover {
             background-color: $tan
@@ -613,9 +643,7 @@ p {
     }
 
     .link {
-        position: absolute;
-        right: 100px;
-        bottom: -100px;
+        @include link-position;
 
         &:hover {
             background-color: $aqua
@@ -773,9 +801,7 @@ p {
     }
 
     .link {
-        position: absolute;
-        right: 100px;
-        bottom: -100px;
+        @include link-position;
 
         &:hover {
             background-color: $green
