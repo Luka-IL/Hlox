@@ -1,28 +1,35 @@
 $(document).ready(function () {
-    let controller = new ScrollMagic.Controller();
-    let crossTitle = $('.crossfit__title')
-    let agencyTitleTop = $('.title-top')
-    let agencyTitleBottom = $('.title-bottom')
-    let agencyVideo = $('#agency-video')
+    let wrapperMenu = $('.header__burger-menu');
 
-    $('section').each(function () {
+    wrapperMenu.on('click', function () {
+        wrapperMenu.toggleClass('open');
+    })
+
+    let controller = new ScrollMagic.Controller();
+    let videoBLock = $('video');
+    let videoSector = $('.video-sector');
+    let titleTop = $('.title-top');
+    let titleBottom = $('.title-bottom');
+    let section = $('section');
+
+    $(section).each(function () {
         let scrollAnimation = new TimelineMax();
 
-        scrollAnimation.to($(this).find(agencyTitleTop), 1, {
+        scrollAnimation.to($(this).find(titleTop), {
                 x: 100,
                 ease: Power4.easeOut
             }, '0')
-            .to($(this).find(agencyTitleBottom), 1, {
+            .to($(this).find(titleBottom), {
                 x: -100,
                 ease: Linear.easeNone
             }, '0')
-            .to($(this).find('video'), 1, {
-                y: 100,
+            .to($(this).find(videoBLock), {
+                y: 130,
                 ease: Linear.easeNone
             }, '0')
-            .to($(this).find('.video-sector'), 1, {
-                y: 40,
-            ease: Linear.easeNone
+            .to($(this).find(videoSector), {
+                y: 60,
+                ease: Linear.easeNone
             }, '0');
 
         new ScrollMagic.Scene({
@@ -33,5 +40,10 @@ $(document).ready(function () {
             .setTween(scrollAnimation)
             .addIndicators()
             .addTo(controller);
+    });
+
+    section.hover(function () {
+        $(this).find(titleTop).toggleClass('hover-top');
+        $(this).find(titleBottom).toggleClass('hover-bottom');
     });
 })
