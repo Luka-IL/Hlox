@@ -1,10 +1,19 @@
 $(document).ready(function () {
+    
+    //Burger menu
+    
     let wrapperMenu = $('.header__burger-menu');
+    let navigationMenu = $('.header__navigation');
+    let body = $('body')
 
     wrapperMenu.on('click', function () {
-        wrapperMenu.toggleClass('open');
+        wrapperMenu.toggleClass('open')
+        navigationMenu.toggleClass('navigation-animation');
+        body.toggleClass('overflow-hidden')
     })
-
+    
+    //Scroll animation
+    
     let controller = new ScrollMagic.Controller();
     let videoBLock = $('video');
     let videoSector = $('.video-sector');
@@ -21,15 +30,15 @@ $(document).ready(function () {
             }, '0')
             .to($(this).find(titleBottom), {
                 x: -100,
-                ease: Linear.easeNone
+                ease: Linear.easeIn
             }, '0')
             .to($(this).find(videoBLock), {
                 y: 130,
-                ease: Linear.easeNone
+                ease: Linear.easeIn
             }, '0')
             .to($(this).find(videoSector), {
                 y: 60,
-                ease: Linear.easeNone
+                ease: Linear.easeIn
             }, '0');
 
         new ScrollMagic.Scene({
@@ -38,12 +47,18 @@ $(document).ready(function () {
                 duration: 1000
             })
             .setTween(scrollAnimation)
-            .addIndicators()
+            //.addIndicators()
             .addTo(controller);
     });
+    
+    //Hover Title
 
     section.hover(function () {
         $(this).find(titleTop).toggleClass('hover-top');
         $(this).find(titleBottom).toggleClass('hover-bottom');
     });
+    
+    
+    
+    
 })

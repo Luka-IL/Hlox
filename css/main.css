@@ -51,16 +51,18 @@ p {
 
 .header__list {
   display: flex;
+  align-items: center;
   justify-content: space-between; }
 
 .header__burger-menu {
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  transition: transform 330ms ease-out; }
+  transition: transform 0.3s ease-out;
+  z-index: 5; }
 
 .header__burger-menu.open {
   transform: rotate(-45deg); }
@@ -69,13 +71,13 @@ p {
   background-color: #fff;
   border-radius: 5px;
   width: 100%;
-  height: 6px; }
+  height: 1px; }
 
 .line-menu.half {
   width: 50%; }
 
 .line-menu.start {
-  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: transform 0.3s;
   transform-origin: right; }
 
 .open .line-menu.start {
@@ -83,20 +85,47 @@ p {
 
 .line-menu.end {
   align-self: flex-end;
-  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: transform 0.3s;
   transform-origin: left; }
 
 .open .line-menu.end {
   transform: rotate(-90deg) translateX(-3px); }
 
 .header__navigation {
-  display: none; }
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: black;
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  top: -100vw;
+  left: 0;
+  z-index: 4;
+  transition: all 0.5s; }
+  .header__navigation .header__navigation-item {
+    font-size: 115px;
+    font-weight: 700;
+    color: black;
+    -webkit-text-stroke: 1px white;
+    text-transform: uppercase; }
+    .header__navigation .header__navigation-item:hover {
+      color: white;
+      transition: all 0.4s; }
+
+.navigation-animation {
+  top: 0;
+  opacity: 1;
+  transition: all 0.5s; }
+
+.overflow-hidden {
+  overflow: hidden; }
 
 .agency {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  margin-top: 150px; }
+  margin-top: 100px; }
 
 .link {
   position: relative;
@@ -174,8 +203,7 @@ p {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  margin-top: 250px;
-  padding-top: 110px; }
+  margin-top: 400px; }
 
 .trend__title-link {
   position: absolute;
@@ -184,7 +212,8 @@ p {
   left: 0; }
   .trend__title-link .trend__title {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    margin-top: -120px; }
     .trend__title-link .trend__title .title-top {
       color: black;
       text-shadow: 0px 0px 5px #fff;
@@ -270,8 +299,7 @@ p {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  margin-top: 250px;
-  padding-top: 110px;
+  margin-top: 400px;
   flex-direction: row-reverse; }
 
 .crossfit__title-link {
@@ -281,7 +309,8 @@ p {
   right: 0; }
   .crossfit__title-link .crossfit__title {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    margin-top: -120px; }
     .crossfit__title-link .crossfit__title .title-top {
       color: black;
       text-shadow: 0px 0px 5px #fff;
@@ -380,8 +409,7 @@ p {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  margin-top: 250px;
-  padding-top: 110px; }
+  margin-top: 400px; }
 
 .yoga__title-link {
   position: absolute;
@@ -390,7 +418,8 @@ p {
   left: 0; }
   .yoga__title-link .yoga__title {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    margin-top: -120px; }
     .yoga__title-link .yoga__title .title-top {
       color: black;
       text-shadow: 0px 0px 5px #fff;
@@ -485,8 +514,7 @@ p {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  margin-top: 250px;
-  padding-top: 110px; }
+  margin-top: 400px; }
 
 .watch__title-link {
   position: absolute;
@@ -495,7 +523,8 @@ p {
   right: 0; }
   .watch__title-link .watch__title {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    margin-top: -120px; }
     .watch__title-link .watch__title .title-top {
       color: black;
       text-shadow: 0px 0px 5px #fff;
@@ -594,8 +623,7 @@ p {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  margin-top: 250px;
-  padding-top: 110px; }
+  margin-top: 400px; }
 
 .motorbike__title-link {
   position: absolute;
@@ -604,7 +632,8 @@ p {
   left: 0; }
   .motorbike__title-link .motorbike__title {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    margin-top: -120px; }
     .motorbike__title-link .motorbike__title .title-top {
       color: black;
       text-shadow: 0px 0px 5px #fff;
@@ -695,8 +724,7 @@ p {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  margin-top: 250px;
-  padding-top: 110px; }
+  margin-top: 400px; }
 
 .food__title-link {
   position: absolute;
@@ -705,7 +733,8 @@ p {
   right: 0; }
   .food__title-link .food__title {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    margin-top: -120px; }
     .food__title-link .food__title .title-top {
       color: black;
       text-shadow: 0px 0px 5px #fff;
@@ -802,8 +831,7 @@ p {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  margin-top: 250px;
-  padding-top: 110px;
+  margin-top: 400px;
   width: 100%;
   height: 420px; }
 
@@ -811,6 +839,7 @@ p {
   position: absolute;
   display: flex;
   flex-direction: column;
+  margin-top: -120px;
   top: -90px;
   left: 20px; }
   .email__title .title-top {
@@ -870,7 +899,8 @@ p {
 footer {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  margin-top: 100px; }
   footer .footer-social {
     display: flex; }
     footer .footer-social .inst {
