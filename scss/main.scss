@@ -202,7 +202,7 @@ $green:#53e496;
 }
 
 body {
-    width: 100%;
+    width: 100vw;
     overflow-x: hidden;
     padding-top: 35px;
     font-size: 15px;
@@ -356,6 +356,7 @@ p {
 }
 
 .header__burger-menu {
+    position: static;
     width: 25px;
     height: 20px;
     display: flex;
@@ -455,7 +456,6 @@ p {
 
 .overflow-hidden {
     overflow: hidden;
-    height: 100vw;
 }
 
 .agency {

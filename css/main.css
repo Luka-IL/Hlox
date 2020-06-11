@@ -5,7 +5,7 @@
   box-sizing: border-box; }
 
 body {
-  width: 100%;
+  width: 100vw;
   overflow-x: hidden;
   padding-top: 35px;
   font-size: 15px;
@@ -126,6 +126,7 @@ p {
   justify-content: space-between; }
 
 .header__burger-menu {
+  position: static;
   width: 25px;
   height: 20px;
   display: flex;
@@ -207,8 +208,7 @@ p {
   transition: all 0.5s; }
 
 .overflow-hidden {
-  overflow: hidden;
-  height: 100vw; }
+  overflow: hidden; }
 
 .agency {
   position: relative;

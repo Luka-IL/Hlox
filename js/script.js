@@ -1,15 +1,25 @@
 $(document).ready(function () {
     
+    new WOW().init();
+    
     //Burger menu
     
     let wrapperMenu = $('.header__burger-menu');
     let navigationMenu = $('.header__navigation');
-    let body = $('body')
+    let body = $('body');
+    let scroll = true;
 
     wrapperMenu.on('click', function () {
         wrapperMenu.toggleClass('open')
         navigationMenu.toggleClass('navigation-animation');
-        body.toggleClass('overflow-hidden')
+        body.toggleClass('overflow-hidden');
+        if (scroll === true) {
+            scrollLock.disablePageScroll();
+            scroll = false
+        } else {
+            scrollLock.enablePageScroll();
+            scroll = true
+        };
     })
     
     //Scroll animation
