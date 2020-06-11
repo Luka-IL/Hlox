@@ -167,6 +167,10 @@ $green:#53e496;
     @media (max-width:1000px) {
         right: 10px;
     }
+
+    @media (max-width: 450px) {
+        right: -10px;
+    }
 }
 
 @mixin text-video {
@@ -359,7 +363,7 @@ p {
     justify-content: space-between;
     cursor: pointer;
     transition: transform 0.3s ease-out;
-    z-index: 5;
+    z-index: 10;
 }
 
 .header__burger-menu.open {
@@ -439,6 +443,7 @@ p {
     @media (max-width:600px) {
         align-items: center;
         justify-content: center;
+        padding-left: 0;
     }
 }
 
@@ -450,6 +455,7 @@ p {
 
 .overflow-hidden {
     overflow: hidden;
+    height: 100vw;
 }
 
 .agency {
@@ -577,6 +583,10 @@ p {
     @include flex-column;
     align-items: flex-end;
     width: 70%;
+    
+    @media (max-width: 450px) {
+            width: 85%;
+        }
 
     .agency__text {
         width: 325px;
@@ -642,6 +652,7 @@ p {
         @include title;
 
         .trend__title-bottom {
+            margin-left: 50px;
             color: $blue;
         }
 
@@ -649,6 +660,12 @@ p {
             color: transparent;
             -webkit-text-stroke: 3px $blue;
             transition: all 0.5s;
+        }
+    }
+
+    .link {
+        @media (max-width:450px) {
+            right: 20px;
         }
     }
 
@@ -670,6 +687,10 @@ p {
 
         @media (max-width:1000px) {
             margin: 0;
+        }
+        
+        @media (max-width:450px) {
+            width:90%;
         }
 
         video {
@@ -746,7 +767,7 @@ p {
 
     .crossfit__video {
         position: relative;
-        width: 82%;
+        width: 75%;
         display: flex;
         justify-content: flex-start;
         margin-left: 30px;
@@ -754,9 +775,14 @@ p {
         @media (max-width:1000px) {
             margin: 0;
         }
+        
+        @media (max-width:450px) {
+            width:90%;
+        }
 
         video {
             @include video;
+            object-position: right;
         }
 
         .crossfit__video-sector {
@@ -806,6 +832,7 @@ p {
         @include title;
 
         .yoga__title-bottom {
+            margin-left: 50px;
             color: $salat;
         }
 
@@ -813,6 +840,12 @@ p {
             color: transparent;
             -webkit-text-stroke: 3px $salat;
             transition: all 0.5s;
+        }
+    }
+
+    .link {
+        @media (max-width:450px) {
+            right: 20px;
         }
     }
 
@@ -839,9 +872,14 @@ p {
         @media (max-width:1000px) {
             margin: 0;
         }
+        
+        @media (max-width:450px) {
+            width:90%;
+        }
 
         video {
-            @include video
+            @include video;
+            object-position: right;
         }
 
         .yoga__video-sector {
@@ -886,7 +924,7 @@ p {
 .watch__title-link {
     @include title-link;
     top: 0;
-    right: 20px;
+    right: 0px;
 
     .watch__title {
         @include title;
@@ -933,6 +971,10 @@ p {
 
         @media (max-width:1000px) {
             margin: 0;
+        }
+        
+        @media (max-width:450px) {
+            width:90%;
         }
 
         video {
@@ -984,14 +1026,15 @@ p {
 
     .motorbike__title {
         @include title;
-        
+
         .motorbike__title-top {
-            @media (max-width:450px){
-                margin-left:-35px;
+            @media (max-width:450px) {
+                margin-left: -35px;
             }
         }
 
         .motorbike__title-bottom {
+            margin-left: 50px;
             color: $red;
         }
 
@@ -999,6 +1042,12 @@ p {
             color: transparent;
             -webkit-text-stroke: 3px $red;
             transition: all 0.5s;
+        }
+    }
+
+    .link {
+        @media (max-width:450px) {
+            right: 20px;
         }
     }
 
@@ -1019,6 +1068,10 @@ p {
 
         @media (max-width:1000px) {
             margin: 0;
+        }
+        
+        @media (max-width:450px) {
+            width:90%;
         }
 
         video {
@@ -1071,10 +1124,10 @@ p {
     .food__title {
         @include title;
         margin-left: -40px;
-        
+
         .food__title-top {
-            @media (max-width:450px){
-                margin-left:-45px;
+            @media (max-width:450px) {
+                margin-left: -45px;
             }
         }
 
@@ -1116,6 +1169,10 @@ p {
 
         @media (max-width:1000px) {
             margin: 0;
+        }
+        
+        @media (max-width:450px) {
+            width:90%;
         }
 
         video {
@@ -1182,18 +1239,18 @@ p {
     @media (max-width:600px) {
         top: -10px;
     }
-    
+
     .title-top {
-            @media (max-width:450px){
-                margin-left:-55px;
-            }
+        @media (max-width:450px) {
+            margin-left: -55px;
         }
+    }
 
     .title-bottom {
         margin-top: -45px;
-        
-        @media (max-width:600px){
-            margin-top:-30px;
+
+        @media (max-width:600px) {
+            margin-top: -30px;
         }
     }
 
@@ -1253,6 +1310,7 @@ p {
             background-color: transparent;
             border-style: none;
             border-bottom: 1px solid white;
+            border-radius: 0;
             color: white;
             z-index: 2;
 
@@ -1306,31 +1364,31 @@ footer {
     justify-content: space-between;
     align-items: center;
     margin-top: 100px;
-    margin-bottom:10px;
-    
-    @media (max-width:800px){
+    margin-bottom: 10px;
+
+    @media (max-width:800px) {
         margin-top: 50px
     }
-    
-    @media (max-width:650px){
+
+    @media (max-width:650px) {
         flex-direction: column;
     }
-    
-    @media (max-width:450px){
+
+    @media (max-width:450px) {
         font-size: 12px;
     }
-    
+
     div {
-        @media (max-width:650px){
-            margin-bottom:15px;
+        @media (max-width:650px) {
+            margin-bottom: 15px;
         }
     }
 
     .footer__social {
         display: flex;
-        
+
         a {
-            margin-right:15px;
+            margin-right: 15px;
         }
     }
 

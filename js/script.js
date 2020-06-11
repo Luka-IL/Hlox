@@ -26,11 +26,11 @@ $(document).ready(function () {
 
         scrollAnimation.to($(this).find(titleTop), {
                 x: 80,
-                ease: Power4.easeOut
+                ease:Power4.easeNone
             }, '0')
             .to($(this).find(titleBottom), {
                 x: -80,
-                ease: Linear.easeIn
+                ease:Power4.easeNone
             }, '0')
             .to($(this).find(videoBLock), {
                 y: 80,
