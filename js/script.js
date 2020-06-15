@@ -11,8 +11,10 @@ $(document).ready(function () {
 
     wrapperMenu.on('click', function () {
         wrapperMenu.toggleClass('open')
-        navigationMenu.toggleClass('navigation-animation');
-        body.toggleClass('overflow-hidden');
+        navigationMenu.toggleClass('navigation-display');
+        setTimeout( function() {
+            navigationMenu.toggleClass('navigation-opacity');
+        }, 20);
         if (scroll === true) {
             scrollLock.disablePageScroll();
             scroll = false
